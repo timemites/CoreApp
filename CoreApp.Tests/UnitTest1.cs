@@ -1,4 +1,5 @@
-using System;
+using CoreApp.Web.Controllers;
+using Microsoft.AspNetCore.Mvc;
 using Xunit;
 
 namespace CoreApp.Tests
@@ -8,7 +9,8 @@ namespace CoreApp.Tests
         [Fact]
         public void Test1()
         {
-
+            var controller = new HomeController();
+            Assert.IsType<ViewResult>(controller.Index());
         }
     }
 }
